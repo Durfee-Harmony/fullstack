@@ -1,1 +1,18 @@
-<p>contact-list works!</p>
+<div class="panel panel-default">
+  <div class="panel-heading" style="display: flex; align-items: center; justify-content: space-between;">
+    <h2>Contacts</h2>
+    <a type="button" class="btn btn-success">New Contact</a>
+  </div>
+  <div class="panel-body">
+    <div class="col-xs-12">
+      <a href="#" class="list-group-item clearfix" *ngFor="let contact of contacts">
+        <div class="pull-left">
+          <h4 class="list-group-item-heading">{{ contact.name }}</h4>
+        </div>
+        <div class="pull-right">
+          <img [src]="contact.imageUrl" alt="{{ contact.name }}" class="img-responsive" style="max-height: 50px;">
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
