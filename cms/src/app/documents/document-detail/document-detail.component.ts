@@ -7,7 +7,7 @@ import { Document } from '../documents.model';
   styleUrls: ['./document-detail.component.css']
 })
 export class DocumentDetailComponent implements OnInit {
-  @Input() doc: Document;
+  @Input() document: Document;
 
   constructor() { }
 

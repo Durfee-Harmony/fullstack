@@ -3,11 +3,11 @@
     <cms-document-list (documentWasSelected)="selectedDocument = $event"></cms-document-list>
   </div>
   <div class="col-md 4">
-    <cms-documents-detail
+    <!-- <cms-documents-detail
       *ngIf="selectedDocument; else infoText"
-      [doc]="selectedDocument"></cms-documents-detail>
+      [document]="selectedDocument"></cms-documents-detail>
     <ng-template #infoText>
       <p>Please select a document!</p>
-    </ng-template>
+    </ng-template> -->
   </div>
 </div>

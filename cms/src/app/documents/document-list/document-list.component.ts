@@ -8,7 +8,7 @@ import { Document } from '../documents.model';
 })
 export class DocumentListComponent implements OnInit {
   @Output() documentWasSelected = new EventEmitter<Document>();
-  // documents: Document[] = [ ];
+  documents: Document[] = [ ];
 
   constructor() { }
 
