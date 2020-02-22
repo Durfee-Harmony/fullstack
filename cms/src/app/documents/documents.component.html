@@ -1,13 +1,14 @@
 <div class="row">
   <div class="col-md-5">
-    <cms-document-list (documentWasSelected)="selectedDocument = $event"></cms-document-list>
+    <cms-document-list
+      (documentWasSelected)="selectedDocument = $event"></cms-document-list>
   </div>
-  <div class="col-md 4">
-    <!-- <cms-documents-detail
+  <div class="col-md 7">
+    <cms-document-detail
       *ngIf="selectedDocument; else infoText"
-      [document]="selectedDocument"></cms-documents-detail>
+      [document]="selectedDocument"></cms-document-detail>
     <ng-template #infoText>
       <p>Please select a document!</p>
-    </ng-template> -->
+    </ng-template>
   </div>
 </div>

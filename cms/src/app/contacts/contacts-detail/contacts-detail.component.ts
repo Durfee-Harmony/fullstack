@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-
 import { Contact } from '../contacts.model';
 
 @Component({
@@ -8,7 +7,6 @@ import { Contact } from '../contacts.model';
   styleUrls: ['./contacts-detail.component.css']
 })
 export class ContactsDetailComponent implements OnInit {
-  // contacts: Contact[] = [];
   @Input() contact: Contact;
 
   constructor() { }
