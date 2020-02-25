@@ -3,7 +3,7 @@
     <cms-document-list
       (documentWasSelected)="selectedDocument = $event"></cms-document-list>
   </div>
-  <div class="col-md 7">
+  <div class="col-md-7">
     <cms-document-detail
       *ngIf="selectedDocument; else infoText"
       [document]="selectedDocument"></cms-document-detail>
