@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Message } from '../messages.model';
+import { MessageService } from '../messages.service';
 import { ContactService } from 'src/app/contacts/contact.service';
 import { Contact } from 'src/app/contacts/contacts.model';
 
@@ -10,16 +11,13 @@ import { Contact } from 'src/app/contacts/contacts.model';
 })
 export class MessageItemComponent implements OnInit {
   @Input() message: Message;
-  messageSender: string = "DEFAULT SENDER";
-
+  messageSender: string = '';
   constructor(private contactService: ContactService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.contactService.getContacts;
     let contact: Contact = this.contactService.getContact(this.message.sender);
     this.messageSender = contact.name;
   }
 
-  onSelected() {
-  }
 }

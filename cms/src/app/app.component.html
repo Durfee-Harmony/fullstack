@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>CMS app running</title>
-</head>
-<cms-header (featureSelected)="onNavigate($event)"></cms-header>
-<body>
-  <cms-contacts *ngIf="loadedFeature === 'contacts'"></cms-contacts>
-  <cms-documents *ngIf="loadedFeature === 'documents'"></cms-documents>
-  <cms-messages *ngIf="loadedFeature === 'messages'"></cms-messages>
-</body>
-
-</html>
+<cms-header></cms-header>
+<div class="container pull-left">
+  <!-- <cms-documents *ngIf="selectedFeature == 'documents'"></cms-documents>
+    <cms-message-list *ngIf="selectedFeature == 'messages'"></cms-message-list>
+    <cms-contacts *ngIf="selectedFeature == 'contacts'"></cms-contacts> -->
+  <router-outlet></router-outlet>
+</div>

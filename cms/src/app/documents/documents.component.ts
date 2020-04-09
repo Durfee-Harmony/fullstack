@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Document } from './documents.model';
 import { DocumentService } from './documents.service';
-
 @Component({
   selector: 'cms-documents',
   templateUrl: './documents.component.html',
@@ -9,7 +8,6 @@ import { DocumentService } from './documents.service';
 })
 export class DocumentsComponent implements OnInit {
   selectedDocument: Document;
-
   constructor(private documentService: DocumentService) { }
 
   ngOnInit() {

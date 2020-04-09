@@ -1,5 +1,5 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Contact } from '../contacts.model';
+import { Component, OnInit, Input } from '@angular/core';
+import { Contact } from '../../contacts.model';
 
 @Component({
   selector: 'cms-contact-item',
@@ -8,14 +8,9 @@ import { Contact } from '../contacts.model';
 })
 export class ContactItemComponent implements OnInit {
   @Input() contact: Contact;
-  @Output() contactSelected = new EventEmitter<void>();
-
   constructor() { }
 
   ngOnInit() {
   }
 
-  onSelected() {
-    this.contactSelected.emit();
-  }
 }
