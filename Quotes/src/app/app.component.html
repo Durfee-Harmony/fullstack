@@ -1,0 +1,31 @@
+<form #userForm='ngForm' (ngSubmit)='onSave(id, userForm.value)' novalidate>
+  <table border='1'>
+    <tr>
+      <td>name</td>
+      <td>
+        <input type="hidden" name="id" [(ngModel)]='id'>
+        <input type="text" name="name" required [(ngModel)]='name'>
+      </td>
+    </tr>
+    <tr>
+      <td>address</td>
+      <td>
+        <input type="text"  name="address" required [(ngModel)]='address'>
+      </td>
+    </tr>
+  </table>
+</form>
+
+<table border='1'>
+  <tr>
+    <td>Id</td>
+    <td>Name</td>
+    <td>Address</td>
+  </tr>
+  <tr *ngFor='let user of Repdata; let ind = index'>
+    <td>{{ind + 1}}</td>
+    <td>{{user.name}}</td>
+    <td>{{user.address}}</td>
+    <td><a (click)='edit(user)' style='color:blueviolet'>Delete</a></td>
+  </tr>
+</table>
